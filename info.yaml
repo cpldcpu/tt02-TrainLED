@@ -16,7 +16,7 @@ project:
 documentation: 
   author:       "cpldcpu"      # Your name
   discord:      "Azure#5593"      # Your discord handle - make sure to include the # part as well
-  title:        "TrainLED2 - Dual RGB-LED driver with 8 bit PWM engine"      # Project title
+  title:        "TrainLED2 - RGB-LED driver with 8 bit PWM engine"      # Project title
   description:  "A RGB-LED driver using the WS2812 protocol"      # Short description of what your project does
   how_it_works: "A fully digital implementation of an RGB LED driver that accepts the WS2812 for data input. The design is fully clocked, so the timing parameters of the protocol depend on the clock rate. A pulse between 1 and 5 clock cycles on the input will be interpreted as a zero, longer pulses as a one. Each driver accepts 3x8=24 bit of input data to set the brightness of LED1,LED2 and LED3 (R;G;B). After 24 bit have been received, additional input bits are retimed and forwarded to the data output.
 
@@ -25,7 +25,7 @@ documentation:
   The PWM engine uses a special dithering scheme to allow flicker free LED dimming even for relatively low clock rates.  
   "      # Longer description of how the project works
   how_to_test:  "Execute the shell script 'run.sh' in the src folder. This will invoke the test bench."      # Instructions on how someone could test your project, include things like what buttons do what and how to set the clock if needed
-  external_hw:  "LEDs should be connected to the six LED output. The data input should be driven by a microcontroller, generating input data in a slowed down WS2812 scheme."      # Describe any external hardware needed
+  external_hw:  "LEDs should be connected to the three LED output. The data input should be driven by a microcontroller, generating input data in a slowed down WS2812 scheme."      # Describe any external hardware needed
   language:     "verilog" # other examples include Verilog, Amaranth, VHDL, etc
   doc_link:     "https://github.com/cpldcpu/tt02-TrainLED"      # URL to longer form documentation, eg the README.md in your repository
   clock_hz:     6kHz   # Clock frequency in Hz (if required) we are expecting max clock frequency to be ~6khz. Provided on input 0.
@@ -34,7 +34,7 @@ documentation:
     - clock
     - reset
     - Din Driver A
-    - Din Driver B
+    - none
     - none
     - none
     - none
@@ -44,8 +44,9 @@ documentation:
     - LED1A
     - LED2A
     - LED3A
-    - Dout Driver B 
-    - LED1B
-    - LED2B
-    - LED3B
+    - none
+    - none
+    - none
+    - none
+
 
