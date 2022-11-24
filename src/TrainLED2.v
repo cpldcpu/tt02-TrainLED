@@ -103,19 +103,20 @@ reg [7:0] datalatch;
 reg [3:0] modulator;
 wire [4:0] modnext;
 
-    always@(*)
-        if (rst) begin
-            datalatch <= 0;
-        end 
-        else if (counter[3:0] == 4'b1111 && dataready) begin
-            if (clk)
-                datalatch <= PW_in;
-        end
+    // always@(*)
+    //     if (rst) begin
+    //         datalatch <= 0;
+    //     end 
+    //     else if (counter[3:0] == 4'b1111 && dataready) begin
+    //         if (clk)
+    //             datalatch <= PW_in;
+    //     end
 
 	always @(posedge clk)
 		if (rst) begin
             LEDdff <= 0;
             modulator <= 0;
+            datalatch <= 0;
 		end
 		else begin
 
@@ -123,6 +124,10 @@ wire [4:0] modnext;
             if (counter == 4'b1111) begin  
                 LEDdff <= modnext[4];
                 modulator <= modnext[3:0];
+
+                if (dataready) 
+                    datalatch <= PW_in;     // use register instead of latch
+
             end
             else if (counter == datalatch[7:4])
                 LEDdff <= 1'b0;
