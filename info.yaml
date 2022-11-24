@@ -25,7 +25,7 @@ documentation:
   The PWM engine uses a special dithering scheme to allow flicker free LED dimming even for relatively low clock rates.  
   "      # Longer description of how the project works
   how_to_test:  "Execute the shell script 'run.sh' in the src folder. This will invoke the test bench."      # Instructions on how someone could test your project, include things like what buttons do what and how to set the clock if needed
-  external_hw:  "LEDs should be connected to the six LED output. The Data input should be driven by a microcontroller, generating input data in a slowed down WS2812 scheme."      # Describe any external hardware needed
+  external_hw:  "LEDs should be connected to the three LED output. The Data input should be driven by a microcontroller, generating input data in a slowed down WS2812 scheme."      # Describe any external hardware needed
   language:     "verilog" # other examples include Verilog, Amaranth, VHDL, etc
   doc_link:     "https://github.com/cpldcpu/tt02-TrainLED"      # URL to longer form documentation, eg the README.md in your repository
   clock_hz:     6kHz   # Clock frequency in Hz (if required) we are expecting max clock frequency to be ~6khz. Provided on input 0.
