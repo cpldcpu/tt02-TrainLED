@@ -11,12 +11,18 @@ TrainLED2 TrainLED2_top1 (
   .dout(io_out[0]),
   .led1(io_out[1]),
   .led2(io_out[2]),
-  .led3(io_out[3]),
+  .led3(io_out[3])
+  );
+
+// Instance 2
+TrainLED2 TrainLED2_top2 (
+  .clk(io_in[0]),
+  .rst(io_in[1]),
+  .din(io_in[3]),
   .dout(io_out[4]),
   .led1(io_out[5]),
   .led2(io_out[6]),
   .led3(io_out[7])
-);
-
+  );
 
 endmodule
