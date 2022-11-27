@@ -10,7 +10,7 @@ After the data input was idle for 96 clock cycles, the input data is latched int
 
 The PWM engine uses a special dithering scheme to allow flicker free LED dimming even for relatively low clock rates.  
 
-Source and testbench can be found in the /sdc folder. Execute the shell script 'run.sh' to invoke the testbench.
+Source and testbench can be found in the [/src](/src) folder. Execute the shell script 'run.sh' to invoke the testbench.
 
 
 
