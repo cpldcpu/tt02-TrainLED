@@ -1,6 +1,6 @@
 ![](../../workflows/gds/badge.svg) ![](../../workflows/docs/badge.svg)
 
-# TrainLED2 - A dual RGB-LED driver for TinyTapeout2
+# TrainLED2 - A RGB-LED driver for TinyTapeout2
 
 A RGB-LED driver using the WS2812 protocol
 
@@ -12,8 +12,9 @@ The PWM engine uses a special dithering scheme to allow flicker free LED dimming
 
 Source and testbench can be found in the [/src](/src) folder. Execute the shell script 'run.sh' to invoke the testbench.
 
+## Output of testbench
 
-
+![screenshot of testbench results](tb_screenshot.png)
 # Original TinyTapeout2 readme
 
 TinyTapeout is an educational project that aims to make it easier and cheaper than ever to get your digital designs manufactured on a real chip!
