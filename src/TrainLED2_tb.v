@@ -1,7 +1,6 @@
 `timescale 1ns / 10ps
 
-// MCPU5 testbench
-// File ending changed to *.vtb to hide from github action
+// TrainLED testbench
 
 module TrainLED_tb;
 
