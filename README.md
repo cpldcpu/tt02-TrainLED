@@ -2,7 +2,7 @@
 
 # TrainLED2 - A RGB-LED driver for TinyTapeout2
 
-A RGB-LED driver using the WS2812 protocol
+A RGB-LED driver using the WS2812 protocol. [Design on TinyTapeout Website](https://tinytapeout.com/runs/tt02/077/). See [here](./validation/) for design Validation on the TinyTapout2 Testboard
 
 A fully digital implementation of an RGB LED driver that accepts the WS2812 for data input. The design is fully clocked, so the timing parameters of the protocol depend on the clock rate. A pulse between 1 and 5 clock cycles on the input will be interpreted as a zero, longer pulses as a one. Each driver accepts 3x8=24 bit of input data to set the brightness of LED1,LED2 and LED3 (R,G,B). After 24 bit have been received, additional input bits are re-timed and forwarded to the data output.
 
