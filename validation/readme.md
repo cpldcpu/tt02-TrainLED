@@ -2,7 +2,7 @@
 
 This folder contains micropython programs that can be used in combination with a Raspberry Pico (or similar RP2040 board) to test the [TrainLED design](https://tinytapeout.com/runs/tt02/077/) for TinyTapout2. 
 
-TrainLED implements a three channel PWM controller for LEDs, that can be programmed with a single wire interface similar to a WS2812. Due to the slow clockrate in the tt02 design, everything is much slower. To accommodate for the slow PWM clock rate, a special dither algorithm based on a low-resolution PWM in combination with an error diffusion logic is used to achieve a higher effective PWM frequency and suppress flickering as much as is possible.
+TrainLED implements a three channel PWM driver for LEDs, that can be programmed with a single wire interface similar to a WS2812. Due to the slow clockrate in the tt02 design, everything is much slower. To accommodate for the slow PWM clock rate, a special dither algorithm based on a low-resolution PWM in combination with an error diffusion logic is used to achieve a higher effective PWM frequency and suppress flickering as much as is possible.
 
 In tt02, the design is clocked with 2455 Hz, resulting in an encoding of a one with a 3530 µs pulse and a zero with 1630 µs, about 4000x slower than a real WS2812. To achieve the same protocol timing as the WS2812, the design would have to be clocked at 9.6 Mhz. 
 
